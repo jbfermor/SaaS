@@ -1,6 +1,24 @@
 {
   "RSpec": {
-    "coverage": {},
-    "timestamp": 1756827781
+    "coverage": {
+      "/home/jbfermor/code/saas/backend/app/models/role.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/jbfermor/code/saas/backend/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1756830487
   }
 }

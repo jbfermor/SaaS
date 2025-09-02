@@ -216,3 +216,29 @@ Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-02 18:11:00 +0200
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started GET "/" for ::1 at 2025-09-02 18:14:53 +0200
+Started GET "/" for ::1 at 2025-09-02 18:14:53 +0200
+Started GET "/" for ::1 at 2025-09-02 18:14:54 +0200
+Started GET "/" for ::1 at 2025-09-02 18:14:54 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:22 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:22 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:28 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:28 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:36 +0200
+Started GET "/" for ::1 at 2025-09-02 18:15:36 +0200
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (9.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-02 16:27:36.670180', '2025-09-02 16:27:36.670190') RETURNING "key" /*application='Backend'*/[0m
+Migrating to CreateRoles (20250902162208)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (33.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250902162208') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
