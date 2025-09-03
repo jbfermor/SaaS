@@ -1,61 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/jbfermor/code/saas/backend/app/models/account_role.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          21,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/jbfermor/code/saas/backend/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/jbfermor/code/saas/backend/app/models/account.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          10,
-          10,
-          10,
-          10,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/jbfermor/code/saas/backend/app/models/role.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
       "/home/jbfermor/code/saas/backend/app/models/user.rb": {
         "lines": [
           1,
@@ -76,8 +21,62 @@
           null,
           null
         ]
+      },
+      "/home/jbfermor/code/saas/backend/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/jbfermor/code/saas/backend/app/models/account_role.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          21,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/jbfermor/code/saas/backend/app/models/account.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          10,
+          10,
+          10,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/jbfermor/code/saas/backend/app/models/role.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1756895812
+    "timestamp": 1756918718
   }
 }

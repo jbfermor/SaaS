@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: proc { [200, {}, ['Hola desde Rails API']] }
+ devise_for :users, defaults: { format: :json },
+  controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+    }
+  root "home#index"
 end
 
