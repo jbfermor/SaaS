@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-09-02T18:53:16+02:00">2025-09-02T18:53:16+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-09-03T12:36:52+02:00">2025-09-03T12:36:52+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,14 +22,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  97.06%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.21
+         3.06
        </span>
     </span> hits/line
     )
@@ -38,15 +38,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>3</b> files in total.
+    <b>5</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>14</b> relevant lines,
-    <span class="green"><b>14</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>34</b> relevant lines,
+    <span class="green"><b>33</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  97.06%
 </span>
 )
   </div>
@@ -68,6 +68,28 @@
         </tr>
       </thead>
       <tbody>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#6b18cafab2b39999a31767275cb548ea911de0ed" class="src_link" title="app/models/account.rb">app/models/account.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">92.31 %</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">3.69</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#c5b5e7b00de791e9b5619b74b9b70f58abfba074" class="src_link" title="app/models/account_role.rb">app/models/account_role.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">4.33</td>
+            
+          </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#59cbfe051dc451d158fd86e200052a5b3dbd6e25" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
@@ -94,11 +116,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1170f81de96efffb568017203a340fb786be1e8b" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.33</td>
+            <td class="cell--number">2.50</td>
             
           </tr>
         
@@ -118,6 +140,404 @@
       </div>
 
       <div class="source_files">
+      
+        <div class="source_table" id="6b18cafab2b39999a31767275cb548ea911de0ed">
+  <div class="header">
+    <h3>app/models/account.rb</h3>
+    <h4>
+      <span class="green">
+  92.31%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>13</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Account &lt; ApplicationRecord</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  belongs_to :creator, class_name: &quot;User&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  has_many :account_roles, dependent: :destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  has_many :users, through: :account_roles</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :name, presence: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  after_create :assign_super_to_creator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def assign_super_to_creator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="13">
+            
+              <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    account_roles.create!(user: self.creator, name: &quot;super&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="14">
+            
+              <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    insider_role = Role.find_by(name: &quot;insider&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="15">
+            
+              <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    puts creator.email</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="16">
+            
+              <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    if self.creator.role.name == &quot;visitor&quot; &amp;&amp; insider_role</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">      self.creator.update!(role: insider_role)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="c5b5e7b00de791e9b5619b74b9b70f58abfba074">
+  <div class="header">
+    <h3>app/models/account_role.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class AccountRole &lt; ApplicationRecord</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  belongs_to :user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  belongs_to :account</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :name, inclusion: { in: %w[super worker] }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="21" data-linenumber="6">
+            
+              <span class="hits">21</span>
+            
+
+            
+
+            <code class="ruby">  validates :name, uniqueness: { scope: :account_id, message: &quot;solo puede haber un super por cuenta&quot; }, if: -&gt; { name == &quot;super&quot; }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :user_id, uniqueness: { scope: :account_id, message: &quot;solo puede tener un rol por cuenta&quot; }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="59cbfe051dc451d158fd86e200052a5b3dbd6e25">
   <div class="header">
@@ -295,8 +715,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -371,7 +791,7 @@
 
             
 
-            <code class="ruby">  has_many :account_roles, dependent: :destroy</code>
+            <code class="ruby">  has_many :created_accounts, class_name: &quot;Account&quot;, foreign_key: &quot;creator_id&quot;</code>
           </li>
         </div>
       
@@ -383,12 +803,24 @@
 
             
 
+            <code class="ruby">  has_many :account_roles</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            
+              <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  has_many :accounts, through: :account_roles</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="9">
             
 
             
@@ -398,7 +830,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="10">
             
               <span class="hits">1</span>
             
@@ -410,7 +842,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="11">
             
 
             
@@ -420,7 +852,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="12">
             
               <span class="hits">1</span>
             
@@ -432,7 +864,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="13">
             
 
             
@@ -442,7 +874,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="14">
             
               <span class="hits">1</span>
             
@@ -454,19 +886,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="14">
+          <li class="covered" data-hits="16" data-linenumber="15">
             
-              <span class="hits">4</span>
-            
-
+              <span class="hits">16</span>
             
 
-            <code class="ruby">    self.update(role: Role.find_by(name: &quot;visitor&quot;)) if role.nil?</code>
+            
+
+            <code class="ruby">    self.role ||= Role.find_by(name: &quot;visitor&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
 
             
@@ -476,7 +908,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
 
             

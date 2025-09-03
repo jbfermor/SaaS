@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_02_163159) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_02_165916) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "account_roles", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.bigint "account_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_account_roles_on_account_id"
+    t.index ["user_id"], name: "index_account_roles_on_user_id"
+  end
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.bigint "creator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_accounts_on_creator_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
@@ -33,4 +51,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_02_163159) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end
+
+  add_foreign_key "account_roles", "accounts"
+  add_foreign_key "account_roles", "users"
+  add_foreign_key "accounts", "users", column: "creator_id"
 end
